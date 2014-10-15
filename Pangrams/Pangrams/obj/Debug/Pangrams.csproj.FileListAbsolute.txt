@@ -1,1 +1,2 @@
 C:\Development\Visual Studio Projects\Pangrams\Pangrams\bin\Debug\Pangrams.exe.config
+C:\Development\CodeEval\Pangrams\Pangrams\bin\Debug\Pangrams.exe.config

@@ -24,7 +24,8 @@ namespace Pangrams
                                       , 'y', 'z'};
 
 
-                    //ArrayList missing = new ArrayList();
+                    //Data structure that only holds unique values 
+                    SortedSet<char> missing = new SortedSet<char>();
 
                     for(int i = 0; i < line.Length; i++)
                     {
@@ -41,11 +42,27 @@ namespace Pangrams
                             }
                         }
 
-                        //If letter isn't in sequence then add it to missing array list
+                        //If letter isn't in sequence then add it to missing hashset
                         if(!isMatch && Char.IsLetter(line[i]))
                         {
-                            Console.Out.Write(Char.ToLower(line[i]));
+                            missing.Add(Char.ToLower(line[i]));
                         }
+                    }
+
+
+                    //Checking if there any letters in the hash set
+                    if (missing.Count == 0)
+                    {
+                        Console.Out.Write("NULL");
+                    }
+
+                    else
+                    {
+                        foreach(char c in missing)
+                        {
+                            Console.Out.Write(c);
+                        }
+                        
                     }
 
                     Console.Out.WriteLine(""); //used for spacing 
