@@ -1,0 +1,6 @@
+C:\Development\Visual Studio Projects\Endianness\Endianness\bin\Debug\Endianness.exe.config
+C:\Development\Visual Studio Projects\Endianness\Endianness\bin\Debug\Endianness.exe
+C:\Development\Visual Studio Projects\Endianness\Endianness\bin\Debug\Endianness.pdb
+C:\Development\Visual Studio Projects\Endianness\Endianness\obj\Debug\Endianness.csprojResolveAssemblyReference.cache
+C:\Development\Visual Studio Projects\Endianness\Endianness\obj\Debug\Endianness.exe
+C:\Development\Visual Studio Projects\Endianness\Endianness\obj\Debug\Endianness.pdb
