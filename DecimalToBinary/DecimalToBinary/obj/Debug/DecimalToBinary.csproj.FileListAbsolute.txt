@@ -1,0 +1,6 @@
+C:\Development\CodeEval\DecimalToBinary\DecimalToBinary\bin\Debug\DecimalToBinary.exe.config
+C:\Development\CodeEval\DecimalToBinary\DecimalToBinary\bin\Debug\DecimalToBinary.exe
+C:\Development\CodeEval\DecimalToBinary\DecimalToBinary\bin\Debug\DecimalToBinary.pdb
+C:\Development\CodeEval\DecimalToBinary\DecimalToBinary\obj\Debug\DecimalToBinary.csprojResolveAssemblyReference.cache
+C:\Development\CodeEval\DecimalToBinary\DecimalToBinary\obj\Debug\DecimalToBinary.exe
+C:\Development\CodeEval\DecimalToBinary\DecimalToBinary\obj\Debug\DecimalToBinary.pdb
