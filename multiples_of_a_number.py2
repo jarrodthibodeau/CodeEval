@@ -1,0 +1,23 @@
+## CodeEval Multiples of a Number Challenge
+## By Jarrod Z. Thibodeau
+## November 17th, 2014
+##
+## Challenge : Given numbers x and n, where n is a power of 2, print out 
+## the smallest multiple of n which is greater than or equal to x. Do not use division or modulo operator.
+
+import sys
+
+test_cases = open(sys.argv[1], 'r')
+
+for test in test_cases:
+	line = test.split(',')
+	num1, num2 = int(line[0]), int(line[1])
+	count = 1
+	multipleFound = False
+	while multipleFound == False:
+		if num2 * count >= num1:
+			multipleFound = True
+			num2 = num2 * count
+		else:
+			count += 1
+	print num2

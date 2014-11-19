@@ -1,0 +1,23 @@
+## CodeEval Major Element Challenge
+## By Jarrod Z. Thibodeau
+## November 16th, 2014
+##
+## The major element in a sequence with the length of L is the element 
+##which appears in a sequence more than L/2 times. The challenge is to find that element in a sequence.
+
+
+import sys
+
+test_cases = open(sys.argv[1], 'r')
+
+for test in test_cases:
+	majorelement = False
+	line = test.split(',')
+	for i in range(0, len(line)):
+		if line.count(line[i]) >= len(line)/2:
+			majorelement = True
+			print(line[i])
+			break
+	if majorelement == False:
+		print("None")
+

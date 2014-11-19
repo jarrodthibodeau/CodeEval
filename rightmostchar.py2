@@ -1,0 +1,15 @@
+## CodeEval Rightmost Char Challenge
+## By Jarrod Z. Thibodeau
+## November 19th, 2014
+##
+## Challenge: You are given a string 'S' and a character 't'. Print out the position of the rightmost 
+## occurrence of 't' (case matters) in 'S' or -1 if there is none. The position to be printed out is zero based.
+
+import sys
+
+test_cases = open(sys.argv[1], 'r')
+
+for test in test_cases:
+	stripper = test.strip('\n')
+	line = stripper.split(',')
+	print line[0].rfind(line[1])

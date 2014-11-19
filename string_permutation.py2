@@ -1,0 +1,19 @@
+## CodeEval String Permutations Challenge
+## By Jarrod Z. Thibodeau
+## November 15th, 2014
+##
+## Write a program which prints all the permutations of a string in alphabetical order. 
+## We consider that digits < upper case letters < lower case letters. The sorting should be performed in ascending order.
+
+import itertools
+import sys
+
+test_cases = open(sys.argv[1], 'r')
+
+for test in test_cases:
+	line = test.strip('\n')
+	output = []
+	for x in itertools.permutations(line):
+		output.append(x)
+	
+	print ','.join(sorted(''.join(i) for i in output))
