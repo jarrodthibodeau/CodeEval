@@ -1,0 +1,21 @@
+## CodeEval JSON Menu Id Challenge
+## By Jarrod Z. Thibodeau
+## November 22nd, 2014
+##
+## Challenge: You have JSON string which describes a menu. Calculate the SUM of 
+## IDs of all "items" in the case a "label" exists for an item. 
+
+import sys
+import re
+
+
+with open(sys.argv[1], 'r') as input:
+	test_cases = input.read().strip().splitlines()
+
+for test in test_cases:
+	ids = re.findall('id": (\d+), "label"', test)
+	numbers = list(ids)
+	sum = 0
+	for i in range(0, len(numbers)):
+		sum += int(numbers[i])
+	print sum
