@@ -1,0 +1,55 @@
+## CodeEval Data Recovery Challege
+## By Jarrod Z. Thibodeau
+## February 8th, 2015
+##
+## Challenge: Your friends decided to make a fun of you.
+## They've installed a script to your computer which shuffled all of the words within a text. 
+## It was a joke, so they've left hints for each sentence which allow you to easily rebuild your data. 
+## The challenge is to write a program which reconstructs each sentence out of a set of words, 
+## you need to find out how to use a given hint and print out the original sentences.
+
+
+import sys
+import collections
+
+with open(sys.argv[1], 'r') as input:
+	test_cases = input.read().strip().splitlines()
+
+for line in test_cases:
+
+	# Doing the necessary splits
+	the_split = line.split(";")
+	words, placements = the_split[0].split(" "), the_split[1].split(" ")
+
+	#Getting lengths of words
+	num_of_elements = len(words)
+	
+	#Finding what elements is missing in the placements
+	missing_element = 0
+	for x in range(1,num_of_elements + 1):
+		if str(x) not in placements:
+			missing_element = x
+			break
+	
+	#Adding missing elements
+	placements.append(str(missing_element))
+
+	#Creating dictionary
+	word_dict = {}
+
+	#Adding placemenst and words into dictionary
+	for i in range(0, len(placements)):
+		word_dict[str(placements[i])] = words[i]
+
+	#Sorting based on key values
+	sorted_word_dict = collections.OrderedDict(sorted(word_dict.items(), key=lambda (key, value) : int(key)))
+
+	print ' '.join(sorted_word_dict.values())
+	
+	
+
+
+
+
+
+
